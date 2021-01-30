@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    margin: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.library {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: .5rem;
+    padding: 1rem;
+}
+
+.book {
+    background-color: rgb(181, 202, 202);
+    min-height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book.read {
+    background-color: rgb(51, 211, 123);
+}
+
+.book .btn-container {
+    margin-top: 3rem;
+}
+
+#book-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: #3954df;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    border-radius: 7px;
+    box-shadow: inset 0 2px 0 hsl(222, 68%, 69%), 0 3px 2px hsla(0, 0%, 0%, .2);
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: inset 0 1px 0 hsl(222, 68%, 69%), 0 2px 1px hsla(0, 0%, 0%, .2);
+    transform: translateY(-.5px);
+}
+
+.btn:hover {
+    background-color:  #3e5bec;
+}
+
+.btn.btn-danger {
+    background-color: #df3939;
+    box-shadow: inset 0 2px 0 hsl(2, 68%, 69%), 0 3px 2px hsla(0, 0%, 0%, .2);
+}
+
+.btn.btn-danger:active {
+    box-shadow: inset 0 1px 0 hsl(0, 68%, 69%), 0 2px 1px hsla(0, 0%, 0%, .2);
+    transform: translateY(-.5px);
+}
+
+.btn.btn-danger:hover {
+    background-color:  #ec3e3e;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 62, 71, 0.5);
+    z-index: -10;
+    place-items: center;
+    display: grid;
+    visibility: hidden;
+}
+
+.show-modal {
+    z-index: 10;
+    visibility: visible;
+}
+
+.modal-overlay .modal-container {
+    background-color: antiquewhite;
+    min-width: 700px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.modal-overlay .modal-container label{
+    display: block;
+}
+
+#add {
+    display: block;
+}
+

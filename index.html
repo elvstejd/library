@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>This is your library</h1>
+        <button id="open-add" class="btn">New Book</button>
+    </div>
+    <div class="library">
+        <div class="book read">
+            <div class="info-container">
+                <h3 id="book-title">1 League Under the Sea</h3>
+                <span id="by">by</span>
+                <span id="author">John Smith</span>
+            </div>
+            <span id="pages-read">120</span>
+            <div class="btn-container">
+                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn">Read</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <h2>Add a book to your library</h2>
+            <form action="" id="add-book">
+                <label for="title">Book Title</label>
+                <input type="text" id="title">
+
+                <label for="author">Book Author</label>
+                <input type="text" id="author-form">
+
+                <label for="pages">Amount of Pages</label>
+                <input type="number" id="pages">
+
+                <label for="read-status">Have you read this book?</label>
+                <input type="checkbox" id="read-status">
+
+                <button type="submit" class="btn" id="add">Add to Library</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
