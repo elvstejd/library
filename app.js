@@ -63,8 +63,8 @@ function displayBooks() {
         </div>
         <span id="pages-read">${book.pages}</span>
         <div class="btn-container">
-            <button type="button" class="btn btn-danger" id="del" >Delete</button>
-            <button type="button" class="btn" id="mark-read">Read</button>
+            <button type="button" class="btn" id="mark-read">Mark as <span id="yes-read">Read</span><span id="not-read">Not Read</span></button>
+            <button type="button" class="btn-second" id="del" >Delete</button>
         </div>
     </div>`;
     }).join("");
