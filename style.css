@@ -121,7 +121,7 @@
 }
 
 .modal-overlay .modal-container {
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     min-width: 700px;
     min-height: 400px;
     display: flex;
@@ -129,13 +129,24 @@
     justify-content: space-between;
     flex-direction: column;
     padding: 3rem;
+    border-radius: 6px;
 }
 
 .modal-overlay .modal-container label{
     display: block;
 }
 
+.modal-overlay .modal-container input{
+    border-radius: 7px;
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+    border: 2px solid rgb(3, 3, 100);
+    background-color: white;
+    outline: none;
+}
+
 #add {
+    margin-top: 2rem;
     display: block;
 }
 
