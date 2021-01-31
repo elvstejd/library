@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.empty-notice {
+    color: rgb(189, 189, 189);
+}
+
 .header {
     margin: 1rem 2rem;
     display: flex;

@@ -43,6 +43,12 @@ library.addEventListener('click', function(e) {
         const book = e.target.parentElement.parentElement.classList.toggle('read');
         changeReadStatus(bookId);
     }
+    if (e.target.parentElement.id === 'mark-read') {
+        const bookId = e.target.parentElement.parentElement.parentElement.dataset.id;
+        const book = e.target.parentElement.parentElement.parentElement.classList.toggle('read');
+        changeReadStatus(bookId);
+        console.log(bookId)
+    }
 });
 
 function clearBookForm() {
@@ -53,6 +59,13 @@ function clearBookForm() {
 }
 
 function displayBooks() {
+    if (myLibrary.length === 0) {
+        library.innerHTML = `<div class="empty-notice">
+        <h1>Your library is empty, try adding books with the top right button.</h1>
+    </div>
+    `;
+        return;
+    } 
     let books = myLibrary.map((book) => {
         const classValue = book.read ? "book read" : "book";
         return  `<div class="${classValue}" data-id="${book.id}">
@@ -108,7 +121,7 @@ function deleteBook(id) {
 
 function changeReadStatus(id) {
     const bookIndex = myLibrary.findIndex((book) => book.id === Number.parseInt(id));
-    myLibrary[bookIndex].toggleRead();
+    myLibrary[bookIndex].read = !myLibrary[bookIndex].read;
     saveBooksToLocalStorage();
 }
 
