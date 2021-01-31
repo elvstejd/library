@@ -4,4 +4,4 @@ Library project from the [The Odin Project](https://www.theodinproject.com/cours
 
 ## Live preview 
 
-Click [here] for live preview.
+Click [here](https://elvstejd.github.io/library/) for live preview.
